@@ -3,6 +3,7 @@ let reset=document.querySelector("#rsb");
 let newg=document.querySelector("#newgame");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+let head = document.querySelector("#head");
 
 let turnO=true;
 
@@ -22,6 +23,7 @@ const resetGame = () => {
     enableBoxes();
     turnO = true;
     msgContainer.classList.add("hide");
+    head.classList.remove("hide");
     count=0;
 }
 
@@ -61,6 +63,7 @@ const disableBoxes = () => {
     }
   };  
   const showWinner = (winner) => {
+    head.classList.add("hide");
     msg.innerText = `Congratulations, Winner is ${winner}`;
     msgContainer.classList.remove("hide");
     disableBoxes();
