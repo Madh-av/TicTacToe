@@ -1,26 +1,28 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-#head{
-    font-size: 8vh;
-    margin-bottom: 1 vh;
-    /* margin-top: 20px; */
-}
 
-
-body{
+body {
     background-color: #AFBE8F;
     text-align: center;
 }
 
-.container{
+/* Styling for heading */
+#head {
+    font-size: 8vh;
+    margin-bottom: 1rem; /* Fixed incorrect spacing */
+}
+
+/* Container for centering elements */
+.container {
     height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Game board styling */
 .game {
     height: 60vmin;
     width: 60vmin;
@@ -30,34 +32,34 @@ body{
     align-items: center;
     gap: 1.5vmin;
 }
-.box{ 
+
+/* Individual Tic-Tac-Toe boxes */
+.box { 
     height: 18vmin;
     width: 18vmin;
     border-radius: 1rem;
-    /* flex-wrap:; */
-    box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
     font-size: 8vmin;
     color: white;
-    background-color:#C75146 ;
+    background-color: #C75146;
 }
-#rsb{
+
+/* Styling for Reset and New Game buttons */
+#rsb, #newgame {
     border-radius: 1rem;
     padding: 1rem;
     font-size: 1.2rem;
     background-color: #191913;
     color: #fff;
+    border: none;
+    cursor: pointer;
 }
-#newgame{
-    border-radius: 1rem;
-    padding: 1rem;
-    font-size: 1.2rem;
-    background-color: #191913;
-    color: #fff;
-    /* display: none; */
-}
+
+/* Message container for displaying winner */
 #msg {
     color: #ffffc7;
     font-size: 5vmin;
+    margin-top: 2rem; /* Added spacing to avoid overlap */
 }
   
 .msg-container {
@@ -68,6 +70,30 @@ body{
     flex-direction: column;
     gap: 4rem;
 }  
+
+
 .hide { 
     display: none;
+}
+
+@media (max-width: 600px) {
+    #head {
+        font-size: 6vh; 
+        margin-bottom: 2rem; 
+    }
+
+    #msg {
+        font-size: 4vmin; /* Reduce font size for smaller screens */
+        margin-top: 2rem; /* Add space between heading and message */
+    }
+
+    .msg-container {
+        gap: 2rem; /* Reduce spacing between elements */
+    }
+
+    .box {
+        height: 16vmin; /* Adjust box size slightly */
+        width: 16vmin;
+        font-size: 7vmin;
+    }
 }
